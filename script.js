@@ -34,16 +34,19 @@ function imparPar() {
     let numero = Number(prompt("Digite um número:"));
     
     if (numero % 2 === 0) {
-        alert("O número é par.");
+        alert("O número é par.")
+    } else if (numero % 2 === 1) {
+        alert("O número é impar");
     } else {
-        alert("O número é ímpar.");
+        alert("O caractére é inválido!");
+        imparPar(); //Repete a função quando houver erro no caso do caractére inválido.
     }
 }
 
 // 4) Faça um algoritmo que leia dois valores inteiros A e B se os valores forem iguais deverá se somar os dois, caso contrário multiplique A por B. Ao final de qualquer um dos cálculos deve-se atribuir o resultado para uma variável C e mostrar seu conteúdo na tela.
 function valoresIguais() {
-    let valorA = Number(prompt("Digite um número inteiro:"));
-    let valorB = Number(prompt("Digite outro número inteiro:"));
+    let valorA = parseInt(prompt("Digite um número inteiro:")); // Força a inserção de um número inteiro
+    let valorB = parseInt(prompt("Digite outro número inteiro:"));
     let valorC;
     let soma = valorA + valorA;
     let multiply = valorA * valorB;
@@ -57,16 +60,78 @@ function valoresIguais() {
     }
 }
 
-
 // 5) Encontrar o dobro de um número caso ele seja positivo e o seu triplo caso seja negativo, imprimindo o resultado.
+function valorPositivoNegativo() {
+    let num1 = Number(prompt("Digite um número:"));
+    let positivo = num1*2
+    let negativo = num1*3
+    
+    if (num1 >= 0){
+        alert("O número é positivo, o dobro de "+ num1 + " é: "+ positivo);
+    } else {
+        alert("O número é negativo, o triplo de " + num1 + " é: "+ negativo)
+    }
+}
 
 // 6) Escreva um algoritmo que lê dois valores booleanos (lógicos) e então determina se ambos são VERDADEIROS ou FALSOS.
 
-// 7) Faça um algoritmo que leia uma variável e some 5 caso seja par ou some 8 caso seja ímpar,
-// imprimir o resultado desta operação.
+function valorBooleano() {
+    // 1. Lemos o texto do utilizador e transformamos tudo em letras minúsculas
+    let resposta1 = prompt("Digite o primeiro valor ('true' ou 'false'):").toLowerCase();
+    let resposta2 = prompt("Digite o segundo valor ('true' ou 'false'):").toLowerCase(); 
+
+    // 2. Convertemos o texto "true" ou "false" num valor booleano real
+    let item1 = (resposta1 === "true");
+    let item2 = (resposta2 === "true");
+
+    // 3. Verificamos se ambos são verdadeiros ou se ambos são falsos
+    if (item1 && item2) {
+        console.log("Ambos os valores são VERDADEIROS.");
+        alert("Ambos os valores são VERDADEIROS.");
+    } else if (!item1 && !item2) {
+        console.log("Ambos os valores são FALSOS.");
+        alert("Ambos os valores são FALSOS.");
+    } else {
+        console.log("Os valores são mistos (um verdadeiro e outro falso).");
+        alert("Os valores são mistos (um verdadeiro e outro falso).");
+    }
+    // if (item1 === true && item2 === true) {
+    //  
+    // }
+    //
+}
+
+// 7) Faça um algoritmo que leia uma variável e some 5 caso seja par ou some 8 caso seja ímpar, imprimir o resultado desta operação.
+
+function lerVariaveis() {
+    let num = Number(prompt("Dgite um valor numérico:"));
+    
+    if (num % 2 === 0) {
+        alert("O número é par, somado +5 = " + num+5);
+    } else if (num % 2 !== 0) {
+        alert("O número é ímpar, somado a 8, o resultado é: "+ num+8);
+    }
+}
+
 
 // 8) Escreva um algoritmo que leia três valores inteiros e diferentes e mostre-os em ordem
 // decrescente.
+
+function ordenarDecrescente() {
+    let valA = Number(prompt("Dgite um número:"))
+    let valB = Number(prompt("Dgite outro número:"))
+    let valC = Number(prompt("Dgite o último número:"))
+
+    if (valA > valB && valB > valC && valA > valC) {
+        let primeiro
+    } else if (valB < valA && valB > valC) {
+        let segundo
+    } else {
+        let terceiro
+        alert("A ordem decrescente dos números é: " + terceiro + segundo + primeiro);
+    }
+
+}
 
 // 9) Tendo como dados de entrada a altura e o sexo de uma pessoa, construa um algoritmo que
 // calcule seu peso ideal, utilizando as seguintes fórmulas:
