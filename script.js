@@ -14,20 +14,32 @@ function somaMaior() {
 
 function tempoCasamento() {
     // 2) Faça um algoritmo que leia o nome, o sexo e o estado civil de uma pessoa. Caso sexo seja “F” e estado civil seja “CASADA”, solicitar o tempo de casada (anos).
-    let nome = String(prompt("Digite o seu nome>"));
+    let nome = String(prompt("Digite o seu nome:"));
     let sexo = String(prompt("Digite o seu sexto (M/F):")).toUpperCase();
-    let estadoCivil = String(prompt("Digite o seu estado civil:"));
+    let estadoCivil = String(prompt("Digite o seu estado civil:")).toUpperCase();
     
     if ( sexo == "F" || sexo =="FEMININO" && estadoCivil == "CASADA") {
-        let tempoCasamento=(prompt("Qual o tempo de casamento (anos)?"));
-    } else {
+        let tempoCasorio=Number(prompt("Qual o tempo de casamento (anos)?"));
+        alert(`======== Dados da pessoa: ========
+            Nome: "${nome},
+            Sexo: ${sexo},
+            Estado Civil: ${estadoCivil}`);
+        } else {
         alert(nome + ", Parabéns!");
     }
 }
 
+function imparPar() {
+    // 3) Faça um algoritmo para receber um número qualquer e informar na tela se é par ou ímpar.
+    let numero = Number(prompt("Digite um número:"));
+    
+    if (numero % 2 === 0) {
+        alert("O número é par.");
+    } else {
+        alert("O número é ímpar.");
+    }
+}
 
-
-// 3) Faça um algoritmo para receber um número qualquer e informar na tela se é par ou ímpar.
 // 4) Faça um algoritmo que leia dois valores inteiros A e B se os valores forem iguais deverá se
 // somar os dois, caso contrário multiplique A por B. Ao final de qualquer um dos cálculos deve-se
 // atribuir o resultado para uma variável C e mostrar seu conteúdo na tela.
